@@ -142,7 +142,7 @@ letsencrypt_is_active() {
   APP=$1
 
   # check if SSL is enabled on per-app level
-  if [[ "$(is_ssl_enabled $APP)" ]]; then
+  if [[ "$(is_ssl_enabled $APP)" != "app" ]]; then
     return 1
   fi
 
